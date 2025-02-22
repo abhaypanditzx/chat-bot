@@ -11,7 +11,7 @@ function App() {
     const newChat = [...chat, { sender: "you", text: message }];
     setChat(newChat);
     try {
-      const response = await axios.post("http://localhost:5000/chat", { message })
+      const response = await axios.post("https://chat-bot-6t4s.onrender.com/chat", { message })
       setChat([...newChat, { sender: "bot", text: response.data.reply }]);
       setMessage("")
     } catch (err) {
