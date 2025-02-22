@@ -1,13 +1,126 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.chat-container {
+  min-width: 300px;
+  max-width: 90vw;
+  min-height: 600px;
+  max-height: 90vh;
+  background-color: #252525;
+  align-items: center;
+  padding: 0;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.send-container {
+  height: 50px;
+  overflow: hidden;
+  background-color: #424242;
+  display: flex;
+  align-items: center;
+  padding: 0 0px;
+  width: 96%;
+  margin:  0 auto;
+}
+
+.send-container input {
+  width: 80%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #424242;
+  color: whitesmoke;
+  margin-right: 10px;
+  flex-grow: 1;
+}
+
+.send-container button {
+  color: whitesmoke;
+  height: 100%;
+  padding: 10px 20px;
+  border: none;
+  background-color: #616161;
+  cursor: pointer;
+}
+
+.nav {
+  background: #424242;
+  height: 3.4rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo {
+  background: #ADADAD;
+  width: 40px;
+  font-size: small;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin: 5px;
+}
+
+
+.user-message {
+  color: #fff;
+  text-align: right;
+  padding: 2px;
+}
+
+.bot-message {
+  color: #fff;
+}
+
+.bot-message strong, .user-message strong {
+  color: #b4b4b4;
+}
+
+.chat-box {
+  padding: 4px;
+  height: 450px;
+  overflow-y: scroll;
+}
+
+@media (max-width: 400px) {
+  .chat-container {
+    min-width: 100%;
+    min-height: 650px;
+  }
+
+  .nav {
+    height: 2.5rem;
+  }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+    font-size: x-small;
+  }
+
+  .chat-box {
+    height: 500px;
+  }
+  .send-container{
+    position: absolute;
+    bottom: 10px;
+    left:7px;
+  }
 }
